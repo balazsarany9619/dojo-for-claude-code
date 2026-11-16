@@ -1,6 +1,6 @@
 # Dojo
 
-**A desktop cockpit for Claude Code.** Every project in your hub folder becomes a card. One click opens Claude in that
+**A multi-session terminal app for Claude Code.** Claude Code is a CLI that runs as a TUI inside your terminal; Dojo is that terminal, built for many sessions at once. Every project in your hub folder becomes a card. One click opens Claude in that
 folder with its `CLAUDE.md` loaded, many sessions run side by side in tabs or a grid, and you always see which one
 needs you, what each project is waiting for and what your week with Claude looked like.
 

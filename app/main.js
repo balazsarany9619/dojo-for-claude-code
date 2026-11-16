@@ -228,6 +228,12 @@ function createWindow() {
   win.webContents.on('will-navigate', (e) => e.preventDefault());
   win.webContents.setWindowOpenHandler(({ url }) => { openExternal(url); return { action: 'deny' }; });
   if (process.env.COCKPIT_SIZE) { const [w, h] = process.env.COCKPIT_SIZE.split('x').map(Number); if (w && h) win.setContentSize(w, h); }
+  if (process.env.COCKPIT_DEMO) {
+    // Demo mode (marketing/demo/start-demo.cmd): own userData, fake hub, this JS file runs after load. Window stays open.
+    win.webContents.once('did-finish-load', () => {
+      try { win.webContents.executeJavaScript(fs.readFileSync(process.env.COCKPIT_DEMO, 'utf8')); } catch (e) { console.error('demo js', e.message); }
+    });
+  }
   if (process.env.COCKPIT_SMOKE) {
     // Smoke test: renderer opens sessions itself, we screenshot and quit.
     win.webContents.once('did-finish-load', () => {
@@ -366,6 +372,7 @@ ipcMain.on('state:save', (_e, state) => { try { fs.writeFileSync(STATE_FILE(), J
 
 app.setAppUserModelId('com.techwithbali.dojo');
 if (process.env.COCKPIT_SMOKE) app.setPath('userData', path.join(app.getPath('temp'), 'dojo-smoke'));
+else if (process.env.COCKPIT_DEMO) app.setPath('userData', path.join(app.getPath('temp'), 'dojo-demo')); // never the real sessions
 // macOS: the default menu binds Cmd+W (close window) and Cmd+K etc. before the page sees them.
 // Own menu keeps Quit/Hide and the edit roles, and leaves Cmd+W/K/1/2/Shift+E to the app.
 function macMenu() {

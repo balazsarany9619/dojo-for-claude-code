@@ -1,7 +1,7 @@
 {
     "name": "dojo",
     "version": "1.0.0",
-    "description": "Multi-session Claude Code cockpit for the project hub",
+    "description": "Multi-session terminal app for Claude Code and the project hub",
     "main": "main.js",
     "scripts": {
         "start": "electron ."
