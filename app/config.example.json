@@ -1,0 +1,11 @@
+{
+  "_note": "Copy to <userData>/config.json (Windows: %APPDATA%\\dojo, Mac: ~/Library/Application Support/dojo). hub = folder whose subfolders become projects.",
+  "hub": "~/Desktop/Claude Code Projects",
+  "skip": [],
+  "extra": [
+    {
+      "name": "Home (~)",
+      "path": "~"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "_note": "Sidebar groups in display order. Names must match folder names in your hub. Unlisted folders land in \"Other\".",
+  "categories": [
+    {
+      "name": "Hub & Ideas",
+      "projects": [
+        "Hub"
+      ]
+    },
+    {
+      "name": "Apps",
+      "projects": []
+    },
+    {
+      "name": "Websites",
+      "projects": []
+    },
+    {
+      "name": "Other",
+      "projects": [],
+      "collapsed": true
+    }
+  ]
+}

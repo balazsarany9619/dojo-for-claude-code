@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#14264d"/><stop offset=".55" stop-color="#0a1430"/><stop offset="1" stop-color="#050a1a"/></linearGradient>
+    <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".22"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+    <linearGradient id="neon" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b8f1ff"/><stop offset=".45" stop-color="#4fc8ff"/><stop offset="1" stop-color="#2d7cff"/></linearGradient>
+    <radialGradient id="halo" cx=".5" cy=".55" r=".5"><stop offset="0" stop-color="#2f8cff" stop-opacity=".45"/><stop offset="1" stop-color="#2f8cff" stop-opacity="0"/></radialGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="256" height="256" rx="58" fill="url(#bg)"/>
+  <circle cx="128" cy="140" r="118" fill="url(#halo)"/>
+  <g filter="url(#glow)" fill="url(#neon)">
+    <path d="M30 56 Q128 86 226 56 L222 80 Q128 104 34 80 Z"/>
+    <path d="M46 88 Q128 108 210 88 L208 99 Q128 117 48 99 Z"/>
+    <rect x="56" y="124" width="144" height="14" rx="3"/>
+    <path d="M80 100 L97 102 L101 212 L75 212 Z"/>
+    <path d="M159 102 L176 100 L181 212 L155 212 Z"/>
+    <path d="M114 156 L135 172 L114 188" fill="none" stroke="url(#neon)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <path d="M8 66 Q8 8 66 8 L190 8 Q248 8 248 66 L248 92 Q128 70 8 112 Z" fill="url(#gloss)"/>
+  <rect x="1.5" y="1.5" width="253" height="253" rx="56.5" fill="none" stroke="#7fd4ff" stroke-opacity=".35" stroke-width="3"/>
+</svg>
